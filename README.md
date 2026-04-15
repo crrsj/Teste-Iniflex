@@ -26,10 +26,12 @@ A aplicação foi totalmente containerizada para garantir que rode em qualquer a
    ````
 3. Nota Importante: O banco de dados PostgreSQL leva alguns segundos para inicializar os serviços internos. O backend possui um healthcheck para aguardar o banco,
    mas se o frontend carregar antes dos dados serem processados, basta atualizar a página (F5).
+   
    Frontend: http://localhost:8081
+   
    Backend (API): http://localhost:8080
 
-   🧠 Explicação dos Métodos (Lógica de Negócio)
+🧠 Explicação dos Métodos (Lógica de Negócio)
 Abaixo, os métodos implementados no FuncionarioService, que cobrem todos os requisitos do teste:
 
 1. Inserção e Remoção
