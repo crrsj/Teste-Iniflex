@@ -57,7 +57,7 @@ A aplicação foi totalmente containerizada para garantir que rode em qualquer a
    imprimirSalariosMinimos: Calcula quantos salários mínimos (R$ 1.212,00) cada funcionário recebe individualmente.
 
 🧪 Qualidade e Testes
-   Foram implementados testes unitários utilizando Mockito para simular o repositório. Cada aspecto do teste foi coberto:
+    Foram implementados testes unitários utilizando Mockito para simular o repositório. Cada aspecto do teste foi coberto:
 
    Validação de cálculos.
 
@@ -75,4 +75,4 @@ A aplicação foi totalmente containerizada para garantir que rode em qualquer a
    <img width="1920" height="1080" alt="p3" src="https://github.com/user-attachments/assets/4d1681a3-dfac-4408-bed7-afc7e5e6476d" />
    <img width="1920" height="1080" alt="p2" src="https://github.com/user-attachments/assets/c497af48-8f20-4be7-aa80-c78379fd5272" />
    <img width="1920" height="1080" alt="p1" src="https://github.com/user-attachments/assets/d8a92e0b-c988-482b-9eab-43215601065e" />
-`
+
