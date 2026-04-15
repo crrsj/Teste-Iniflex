@@ -39,7 +39,7 @@ A aplicação foi totalmente containerizada para garantir que rode em qualquer a
    removerPorNome: Localiza e remove um funcionário específico (ex: "João") da base de dados.
 
 2. Formatação e Exibição (Requisito 3.3 e 3.4)
-   listar: Retorna os funcionários. Se o parâmetro ordenado for verdadeiro, utiliza Sort.by("nome") para entrega alfabética. A formatação de datas (dd/MM/yyyy) e números (padrão brasileiro) é tratada na camada de   saída/Doria.
+   listar: Retorna os funcionários. Se o parâmetro ordenado for verdadeiro, utiliza Sort.by("nome") para entrega alfabética. A formatação de datas (dd/MM/yyyy) e números (padrão brasileiro) é tratada na camada de     saída/Doria.
 
 3. Alterações Salariais (Requisito 3.7)
    atualizarSalarios: Aplica um aumento de 10% sobre o salário atual de todos os funcionários utilizando BigDecimal para garantir precisão decimal (essencial em sistemas financeiros).
