@@ -22,7 +22,7 @@ A aplicação foi totalmente containerizada para garantir que rode em qualquer a
 2. Execute o comando:
    bash
    docker-compose up --build
-   ````
+
    ````
 3. Nota Importante: O banco de dados PostgreSQL leva alguns segundos para inicializar os serviços internos. O backend possui um healthcheck para aguardar o banco,
    mas se o frontend carregar antes dos dados serem processados, basta atualizar a página (F5).
