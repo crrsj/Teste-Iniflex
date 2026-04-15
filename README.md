@@ -25,6 +25,11 @@ A aplicação foi totalmente containerizada para garantir que rode em qualquer a
    
 3. Nota Importante: O banco de dados PostgreSQL leva alguns segundos para inicializar os serviços internos. O backend possui um healthcheck para aguardar o banco,
    mas se o frontend carregar antes dos dados serem processados, basta atualizar a página (F5).
+
+   ### 🚀 Carga Inicial Automática (Database Seeding)
+   Para facilitar a avaliação, a aplicação conta com um mecanismo de **carga automática de dados**. Assim que o sistema inicia e estabelece a conexão com o PostgreSQL,
+   o serviço verifica se a base de dados está vazia e   insere automaticamente os 10 funcionários solicitados no caderno de testes.
+ - Isso garante que todas as operações de agrupamento, cálculo de salários e filtros de data possam ser testadas imediatamente após o `docker-compose up`.
    
    Frontend: http://localhost:8081
    
@@ -39,17 +44,18 @@ A aplicação foi totalmente containerizada para garantir que rode em qualquer a
    removerPorNome: Localiza e remove um funcionário específico (ex: "João") da base de dados.
 
 2. Formatação e Exibição (Requisito 3.3 e 3.4)
-   listar: Retorna os funcionários. Se o parâmetro ordenado for verdadeiro, utiliza Sort.by("nome") para entrega alfabética. A formatação de datas (dd/MM/yyyy) e números (padrão brasileiro) é tratada na camada de     saída/Doria.
+   listar: Retorna os funcionários. Se o parâmetro ordenado for verdadeiro, utiliza Sort.by("nome") para entrega alfabética.
+   A formatação de datas (dd/MM/yyyy) e números (padrão brasileiro) é tratada na camada de saída/Doria.
 
-3. Alterações Salariais (Requisito 3.7)
+4. Alterações Salariais (Requisito 3.7)
    atualizarSalarios: Aplica um aumento de 10% sobre o salário atual de todos os funcionários utilizando BigDecimal para garantir precisão decimal (essencial em sistemas financeiros).
 
-4. Agrupamento e Filtros (Requisito 3.5, 3.6 e 3.8)
+5. Agrupamento e Filtros (Requisito 3.5, 3.6 e 3.8)
    agruparPorFuncao: Utiliza Collectors.groupingBy para criar um Mapa onde a chave é a Profissão e o valor é a lista de funcionários daquela área.
 
    aniversariantesMes: Filtra funcionários que fazem aniversário nos meses selecionados (ex: 10 e 12) através da extração do MonthValue da data de nascimento.
 
-5. Cálculos e Estatísticas (Requisito 3.9, 3.11 e 3.12)
+6. Cálculos e Estatísticas (Requisito 3.9, 3.11 e 3.12)
    buscarMaisVelho: Compara as datas de nascimento para encontrar a menor data (a mais antiga), identificando o funcionário com maior idade.
 
    totalSalarios: Soma todos os salários do banco utilizando .reduce(BigDecimal.ZERO, BigDecimal::add).
