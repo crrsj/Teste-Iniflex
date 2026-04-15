@@ -55,23 +55,24 @@ A aplicação foi totalmente containerizada para garantir que rode em qualquer a
    totalSalarios: Soma todos os salários do banco utilizando .reduce(BigDecimal.ZERO, BigDecimal::add).
 
    imprimirSalariosMinimos: Calcula quantos salários mínimos (R$ 1.212,00) cada funcionário recebe individualmente.
-````
+
 🧪 Qualidade e Testes
-Foram implementados testes unitários utilizando Mockito para simular o repositório. Cada aspecto do teste foi coberto:
+   Foram implementados testes unitários utilizando Mockito para simular o repositório. Cada aspecto do teste foi coberto:
 
-Validação de cálculos.
+   Validação de cálculos.
 
-Verificação de fluxos de deleção e salvamento.
+   Verificação de fluxos de deleção e salvamento.
 
-Testes de agrupamento e filtros de data.
+   Testes de agrupamento e filtros de data.
 
 💡 Diferenciais Implementados
-Virtual Threads: A aplicação está preparada para o futuro do Java, processando requisições com threads leves, ideal para serviços que escalam em nuvem.
+   Virtual Threads: A aplicação está preparada para o futuro do Java, processando requisições com threads leves, ideal para serviços que escalam em nuvem.
 
-Resiliência no Docker: Configuração de rede e dependência entre containers para garantir que o sistema suba de forma organizada.
+   Resiliência no Docker: Configuração de rede e dependência entre containers para garantir que o sistema suba de forma organizada.
 
-Clean Code: Métodos curtos, nomes legíveis e responsabilidade única.
-````
+   Clean Code: Métodos curtos, nomes legíveis e responsabilidade única.
+
    <img width="1920" height="1080" alt="p3" src="https://github.com/user-attachments/assets/4d1681a3-dfac-4408-bed7-afc7e5e6476d" />
    <img width="1920" height="1080" alt="p2" src="https://github.com/user-attachments/assets/c497af48-8f20-4be7-aa80-c78379fd5272" />
    <img width="1920" height="1080" alt="p1" src="https://github.com/user-attachments/assets/d8a92e0b-c988-482b-9eab-43215601065e" />
+`
