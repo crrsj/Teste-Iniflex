@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniflex - Gestão Completa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Painel Administrativo Iniflex</h1>
+        <div>
+            <button onclick="cargaInicial()" class="btn-seed">Carga Inicial (3.1)</button>
+            <button onclick="aplicarAumento()" class="btn-upgrade">Aumento 10% (3.4)</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <div class="card">
+                <h3>Total Salários (3.11)</h3>
+                <p id="totalSalarios">R$ 0,00</p>
+            </div>
+            <div class="card">
+                <h3>Mais Velho (3.9)</h3>
+                <p id="maisVelhoInfo">-</p>
+            </div>
+        </section>
+
+        <section class="controls">
+            <button onclick="buscarTodos()">Listar Todos (3.3)</button>
+            <button onclick="buscarOrdenados()">Ordem Alfabética (3.10)</button>
+            <button onclick="buscarAniversariantes()">Aniversariantes Out/Dez (3.8)</button>
+            <button onclick="buscarAgrupados()">Ver Agrupados por Função (3.5/3.6)</button>
+        </section>
+
+        <h2 id="tituloTabela">Lista de Funcionários</h2>
+        <table id="tabelaPrincipal">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Data Nasc.</th>
+                    <th>Salário</th>
+                    <th>Função</th>
+                    <th>Salários Mín. (3.12)</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="corpoTabela"></tbody>
+        </table>
+
+        <div id="containerAgrupado" style="display:none;">
+            <h2>Funcionários Agrupados por Função</h2>
+            <div id="listaAgrupada"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
