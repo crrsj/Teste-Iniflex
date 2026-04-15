@@ -31,30 +31,30 @@ A aplicação foi totalmente containerizada para garantir que rode em qualquer a
    Backend (API): http://localhost:8080
 
 🧠 Explicação dos Métodos (Lógica de Negócio)
-Abaixo, os métodos implementados no FuncionarioService, que cobrem todos os requisitos do teste:
+   Abaixo, os métodos implementados no FuncionarioService, que cobrem todos os requisitos do teste:
 
 1. Inserção e Remoção
-salvarTodos: Realiza a persistência em lote da lista inicial de funcionários.
+   salvarTodos: Realiza a persistência em lote da lista inicial de funcionários.
 
-removerPorNome: Localiza e remove um funcionário específico (ex: "João") da base de dados.
+   removerPorNome: Localiza e remove um funcionário específico (ex: "João") da base de dados.
 
 2. Formatação e Exibição (Requisito 3.3 e 3.4)
-listar: Retorna os funcionários. Se o parâmetro ordenado for verdadeiro, utiliza Sort.by("nome") para entrega alfabética. A formatação de datas (dd/MM/yyyy) e números (padrão brasileiro) é tratada na camada de saída/Doria.
+   listar: Retorna os funcionários. Se o parâmetro ordenado for verdadeiro, utiliza Sort.by("nome") para entrega alfabética. A formatação de datas (dd/MM/yyyy) e números (padrão brasileiro) é tratada na camada de   saída/Doria.
 
 3. Alterações Salariais (Requisito 3.7)
-atualizarSalarios: Aplica um aumento de 10% sobre o salário atual de todos os funcionários utilizando BigDecimal para garantir precisão decimal (essencial em sistemas financeiros).
+   atualizarSalarios: Aplica um aumento de 10% sobre o salário atual de todos os funcionários utilizando BigDecimal para garantir precisão decimal (essencial em sistemas financeiros).
 
 4. Agrupamento e Filtros (Requisito 3.5, 3.6 e 3.8)
-agruparPorFuncao: Utiliza Collectors.groupingBy para criar um Mapa onde a chave é a Profissão e o valor é a lista de funcionários daquela área.
+   agruparPorFuncao: Utiliza Collectors.groupingBy para criar um Mapa onde a chave é a Profissão e o valor é a lista de funcionários daquela área.
 
-aniversariantesMes: Filtra funcionários que fazem aniversário nos meses selecionados (ex: 10 e 12) através da extração do MonthValue da data de nascimento.
+   aniversariantesMes: Filtra funcionários que fazem aniversário nos meses selecionados (ex: 10 e 12) através da extração do MonthValue da data de nascimento.
 
 5. Cálculos e Estatísticas (Requisito 3.9, 3.11 e 3.12)
-buscarMaisVelho: Compara as datas de nascimento para encontrar a menor data (a mais antiga), identificando o funcionário com maior idade.
+   buscarMaisVelho: Compara as datas de nascimento para encontrar a menor data (a mais antiga), identificando o funcionário com maior idade.
 
-totalSalarios: Soma todos os salários do banco utilizando .reduce(BigDecimal.ZERO, BigDecimal::add).
+   totalSalarios: Soma todos os salários do banco utilizando .reduce(BigDecimal.ZERO, BigDecimal::add).
 
-imprimirSalariosMinimos: Calcula quantos salários mínimos (R$ 1.212,00) cada funcionário recebe individualmente.
+   imprimirSalariosMinimos: Calcula quantos salários mínimos (R$ 1.212,00) cada funcionário recebe individualmente.
 ````
 🧪 Qualidade e Testes
 Foram implementados testes unitários utilizando Mockito para simular o repositório. Cada aspecto do teste foi coberto:
