@@ -33,7 +33,7 @@ A aplicação foi totalmente containerizada para garantir que rode em qualquer a
    
    Frontend: http://localhost:8081
    
-   Backend (API): http://localhost:8080
+   Backend (API): http://localhost:8080/swagger-ui/index.html#/
 
 🧠 Explicação dos Métodos (Lógica de Negócio)
    Abaixo, os métodos implementados no FuncionarioServico, que cobrem todos os requisitos do teste:
