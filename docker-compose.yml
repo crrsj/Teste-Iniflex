@@ -20,7 +20,7 @@ services:
 
 
   backend:
-    build: ./iniflex
+    build: ./rhflex
     container_name: iniflex-api
     ports:
       - "8080:8080"
@@ -37,7 +37,7 @@ services:
 
 
   frontend:
-    build: ./iniflex-front
+    build: rhflex-front
     container_name: iniflex-web
     ports:
       - "8081:80"
