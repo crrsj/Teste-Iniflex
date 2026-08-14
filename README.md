@@ -1,4 +1,4 @@
-# Desafio Iniflex - Gestão de Funcionários 🚀
+# Sistema RH-Flex: Gestão de Funcionários 🚀
 
 Este projeto é uma solução Full Stack desenvolvida para o desafio técnico da Projedata. A aplicação consiste em um sistema de gerenciamento de funcionários, focado em manipulação de dados, cálculos financeiros e organização de coleções seguindo requisitos de negócio rigorosos.
 
