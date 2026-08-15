@@ -18,7 +18,7 @@ A aplicação consiste em um sistema de gerenciamento de funcionários, focado e
 
 A aplicação foi totalmente containerizada para garantir que rode em qualquer ambiente sem necessidade de instalar Java ou Postgres localmente.
 
-1. Navegue até a pasta raiz `Projedata`.
+1. Navegue até a pasta raiz do projeto.
 2. Execute o comando:
    bash
    docker-compose up -d --build
@@ -28,7 +28,7 @@ A aplicação foi totalmente containerizada para garantir que rode em qualquer a
 
    ### 🚀 Carga Inicial Automática (Database Seeding)
    Para facilitar a avaliação, a aplicação conta com um mecanismo de **carga automática de dados**. Assim que o sistema inicia e estabelece a conexão com o PostgreSQL,
-   o serviço verifica se a base de dados está vazia e   insere automaticamente os 10 funcionários solicitados no caderno de testes.
+   o serviço verifica se a base de dados está vazia e insere automaticamente um conjunto inicial de 10 funcionários para demonstração.
  - Isso garante que todas as operações de agrupamento, cálculo de salários e filtros de data possam ser testadas imediatamente após o `docker-compose up`.
    
    Frontend: http://localhost:8081
